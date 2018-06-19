@@ -12,20 +12,27 @@ console.log(multiply(2, 5));
 console.log(multiply(6, 6));
 console.log(multiply(5));
 
-// EXC 3 and EXC 4
+// EXC 3 I exc 4
+const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1],
+      average = (...parameters) => {
+    console.log(parameters);
+    let sum = 0;
+    
+    for (let i = 0; i < parameters.length; i++) {
+        sum += parameters[i];
+    }
+    return sum / parameters.length;
+}
 
-const grades = [1, 5, 5, 5, 4, 3, 3, 2, 1];
-const average = (...parameters) => Math.round(parameters/parameters.lenght);
-
-console.log(average(1));
-console.log(average(1, 3));
-console.log(average(1, 3, 6, 6));
+average(1);
+average(1, 3);
+average(1, 3, 6, 6);
 console.log(average(...grades));
 
 // EXC 5
 
 const data = [1, 4, 'Iwona', false, 'Nowak'],
-      [ , ,firstname, , ,] = data, 
-      [ , , , ,lastname] = data;
+      [ , ,firstname, ,lastname] = data;
 
 console.log(firstname + ' ' + lastname);
+
